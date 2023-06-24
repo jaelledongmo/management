@@ -1,0 +1,299 @@
+<div class="panel-header panel-header-lg">
+  <div class="main-content"><br><br>
+    <div class="row">
+      <div class="card">
+          <div class="card-header">
+            <h5 class="title">Creer un Projet</h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-3 px-1">
+                  <div class="form-group">
+                    <label>Nom du projet</label>
+                    <input type="text" class="form-control" placeholder="Username" value="Construction d...">
+                  </div>
+                </div>
+                <div class="col-md-3 px-1">
+                  <div class="form-group">
+                    <label>Duree du projet</label>
+                    <input type="text" class="form-control" placeholder="Username" value="5 mois">
+                  </div>
+                </div>
+                <div class="col-md-3 px-1">
+                  <div class="form-group">
+                    <label>Budjet du projet</label>
+                    <input type="text" class="form-control" placeholder="Username" value="1000... FCFA">
+                  </div>
+                </div><br>
+                <div class="col-md-3 px-1">
+                  <div class="form-group">
+                    <label>Objectifs du projet</label>
+                    <input type="text" class="form-control" placeholder="Objetifs" value="nous souhaitons contruire u...">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-content">
+  <div class="row">
+    <!-- <div class="col-lg-4">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Projet 1</h5>
+          <h4 class="card-title">Construction d'un batiment R + 5</h4>
+          <div ngbDropdown>
+            <button type="button" class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret" ngbDropdownToggle>
+              <i class="now-ui-icons loader_gear"></i>
+            </button>
+            <div ngbDropdownMenu class="dropdown-menu-right">
+              <a class="dropdown-item" href="#">Supprimer</a>
+              <a class="dropdown-item" href="#">Modifier</a>
+              <a class="dropdown-item" href="#">Valider</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons ui-2_time-alarm"></i> Il y a 7 Jours
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="col-lg-4 col-md-6"> -->
+      <!-- <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Projet 2</h5>
+          <h4 class="card-title">Renovation d'un restaurant</h4>
+          <div ngbDropdown>
+            <button type="button" class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret" ngbDropdownToggle>
+              <i class="now-ui-icons loader_gear"></i>
+            </button>
+            <div ngbDropdownMenu class="dropdown-menu-right">
+              <a class="dropdown-item" href="#">Supprimer</a>
+              <a class="dropdown-item" href="#">Modifier</a>
+              <a class="dropdown-item" href="#">Valider</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons ui-2_time-alarm"></i> Il y a 7 Jours
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="col-lg-4 col-md-6"  *ngFor="let projet of projets">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Projet {{projet.id}}</h5>
+          <h4 class="card-title">{{projet.name}}</h4>
+          <div ngbDropdown>
+            <button type="button" class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret" ngbDropdownToggle>
+              <i class="now-ui-icons loader_gear"></i>
+            </button>
+            <div ngbDropdownMenu class="dropdown-menu-right">
+              <a class="dropdown-item" href="#">Supprimer</a>
+              <a class="dropdown-item" href="#">Modifier</a>
+              <a class="dropdown-item" href="#">Valider</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons ui-2_time-alarm"></i> {{projet.time}}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+
+  <div class="row">
+      <div class="card  card-tasks">
+        <div class="card-header ">
+          <h5 class="card-category">Liste des taches du projet 1</h5>
+          <h4 class="card-title">Construction d'un batiment R + 5</h4>
+        </div>
+        <div class="card-body ">
+          <div class="table-full-width table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <span class="form-check-sign"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td class="text-left">Construction de la fondation</td>
+                  <td class="td-actions text-right">
+                    <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                      <i class="now-ui-icons ui-2_settings-90"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                      <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox">
+                        <span class="form-check-sign"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td class="text-left">Niveau 1</td>
+                  <td class="td-actions text-right">
+                    <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                      <i class="now-ui-icons ui-2_settings-90"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                      <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <span class="form-check-sign"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td class="text-left">Niveau 2</td>
+                  <td class="td-actions text-right">
+                    <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                      <i class="now-ui-icons ui-2_settings-90"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                      <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <i class="now-ui-icons loader_refresh spin"></i> mis a jour il y a minutes
+          </div>
+        </div>
+      </div>
+  </div>  
+  
+  <div class="row">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-category">Liste des membres de l'equipe projet 1</h5>
+          <h4 class="card-title">Construction d'un batiment R + 5</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Country
+                </th>
+                <th>
+                  City
+                </th>
+                <th class="text-right">
+                  Salary
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Dakota Rice
+                  </td>
+                  <td>
+                    Niger
+                  </td>
+                  <td>
+                    Oud-Turnhout
+                  </td>
+                  <td class="text-right">
+                    $36,738
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Minerva Hooper
+                  </td>
+                  <td>
+                    Curaçao
+                  </td>
+                  <td>
+                    Sinaai-Waas
+                  </td>
+                  <td class="text-right">
+                    $23,789
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Sage Rodriguez
+                  </td>
+                  <td>
+                    Netherlands
+                  </td>
+                  <td>
+                    Baileux
+                  </td>
+                  <td class="text-right">
+                    $56,142
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Doris Greene
+                  </td>
+                  <td>
+                    Malawi
+                  </td>
+                  <td>
+                    Feldkirchen in Kärnten
+                  </td>
+                  <td class="text-right">
+                    $63,542
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Mason Porter
+                  </td>
+                  <td>
+                    Chile
+                  </td>
+                  <td>
+                    Gloucester
+                  </td>
+                  <td class="text-right">
+                    $78,615
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
